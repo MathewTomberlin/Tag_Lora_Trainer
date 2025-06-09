@@ -9,7 +9,7 @@ python tag_lora_trainer.py
 - Base Model (currently provides a HuggingFace repo to download from, but may take a local directory)
 
 # Using the LoRa
-def load_lora(_self, base_model_dir, lora_path):
+```def load_lora(_self, base_model_dir, lora_path):
         # Load tokenizer
         tokenizer = AutoTokenizer.from_pretrained(base_model_dir)
 
@@ -56,4 +56,4 @@ def lora_inference(self, description: str, settings: dict) -> str:
         if "<|im_start|>assistant\n" in full_response:
             tags = full_response.split("<|im_start|>assistant\n")[-1].strip()
             tags = re.sub(r'<\|.*?\|>', '', tags).strip()
-            return tags
+            return tags```
