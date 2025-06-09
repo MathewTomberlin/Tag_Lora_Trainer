@@ -1,0 +1,3 @@
+*.parquet
+.danbooru_tag_base/
+.danbooru_tag_lora/
