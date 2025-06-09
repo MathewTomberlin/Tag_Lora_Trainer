@@ -10,6 +10,11 @@ From a terminal: `python tag_lora_trainer.py`
 
 # Using the LoRa
 ```
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
+import torch
+import re
+
 def load_lora(_self, base_model_dir, lora_path):
         # Load tokenizer
         tokenizer = AutoTokenizer.from_pretrained(base_model_dir)
